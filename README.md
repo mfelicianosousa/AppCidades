@@ -34,18 +34,11 @@ Pré-requisitos: dotnet.5
 # clonar repositório
 https://github.com/mfelicianosousa/AppCidades.git
 
-# entrar na pasta do projeto back end
-cd cidades
 
-# executar o projeto
-./mvnw spring-boot:run
 ```
 
 ## Front end web
 Pré-requisitos: npm / yarn
-
-Recursos disponíveis para acesso via API:
-* [**Contatos**](#reference/recursos/contatos)
 
 ## Métodos
 Requisições para a API devem seguir os padrões:
