@@ -39,7 +39,7 @@ namespace AppCidades.Entities
 
         public Pessoa AtualizarPessoa(Pessoa pessoa)
         {
-            if (!Exists(pessoa.id)) return new Pessoa();
+            if (!Exists(pessoa.id)) return null;
 
             var result = _local.pessoa.SingleOrDefault(p => p.id.Equals(pessoa.id));
             if (result != null)

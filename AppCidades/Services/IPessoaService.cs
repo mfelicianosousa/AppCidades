@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AppCidades.Services
 {
-    interface IPessoaService
+    public interface IPessoaService
     {
         List<Pessoa> RetonarListaPessoa();
 
