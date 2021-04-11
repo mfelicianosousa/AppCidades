@@ -4,8 +4,8 @@
 # Sobre o projeto
 Projeto Inicial para Cidades Inteligentes
 
-AppCidades é uma aplicação full stack web,  inicialmente construída para testes, evento organizado pelo programa de Trainee 2020 [Squadra Digital - New Thinkers ](https://www.squadra.com.br/ "Site da Squadra").
-A aplicação consiste em desenvover uma API EM C# de qualquer objeto a revelia do aluno, desenvolver um crud  que depois será evoluido, utilizando boas práticas 
+AppCidades é uma aplicação full stack web, inicialmente construída para testes, evento organizado pelo programa de Trainee 2020 [Squadra Digital - New Thinkers ](https://www.squadra.com.br/ "Site da Squadra").
+A aplicação consiste em desenvolver uma API EM C# de qualquer objeto a revelia do aluno, sendo um crud que depois será evoluido, utilizando boas práticas 
 de desenvolvimento, tais como DDD, testes unitários.
 
 
