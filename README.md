@@ -146,7 +146,7 @@ Obs: Para alterações o id é passado no corpo da requisição
 
     + Body
         {
-            "id": 1,                <------------------- Identica o registro que será alterado
+            "id": 1,             
             "nome": "Marcelino F Sousa",
             "sexo": "M",
             "cpf": "06656087674",
