@@ -41,8 +41,8 @@ namespace AppCidades
             services.AddScoped<IAdicionarPessoaUseCase, AdicionarPessoaUseCase>();
             services.AddScoped<IAtualizarPessoaUseCase, AtualizarPessoaUseCase>();
             services.AddScoped<IRemoverPessoaUseCase, RemoverPessoaUseCase>();
-            services.AddScoped<IRetornarListaPessoaUseCase, RetornarListaPessoaUseCase>();
-            services.AddScoped<IRetornarPessoaPorIdUseCase, RetornarPessoaPorIdUseCase>();
+           // services.AddScoped<IRetornarListaPessoaUseCase, RetornarListaPessoaUseCase>();
+           // services.AddScoped<IRetornarPessoaPorIdUseCase, RetornarPessoaPorIdUseCase>();
             services.AddScoped<IRepositorioPessoas, RepositorioPessoas>();
             services.AddScoped<IAdicionarPessoaAdapter, AdicionarPessoaAdapter>();
 

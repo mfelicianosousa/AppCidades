@@ -7,5 +7,6 @@ namespace AppCidades.DTO.Pessoa.RemoverPessoa
 {
     public class RemoverPessoaResponse
     {
+        public string msg { get; set; }
     }
 }

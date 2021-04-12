@@ -1,4 +1,5 @@
 ﻿using AppCidades.DTO.Pessoa.AdicionarPessoa;
+using AppCidades.DTO.Pessoa.RemoverPessoa;
 using AppCidades.Entities;
 using AppCidades.Services;
 using AppCidades.UseCase.Pessoa;
@@ -14,11 +15,17 @@ namespace AppCidades.Controllers
         private readonly ILogger<PessoaController> _logger;
         private readonly IPessoaService _pessoa;
         private readonly IAdicionarPessoaUseCase _adicionarPessoaUseCase;
+        private readonly IRemoverPessoaUseCase _removerPessoaUseCase;
 
-        public PessoaController(ILogger<PessoaController> logger, IPessoaService pessoa)
+        public PessoaController(ILogger<PessoaController> logger,
+                                IPessoaService pessoa,
+                                IAdicionarPessoaUseCase adicionarPessoaUseCase,
+                                IRemoverPessoaUseCase removerPessoaUseCase)
         {
             _logger = logger;
             _pessoa = pessoa;
+            _adicionarPessoaUseCase = adicionarPessoaUseCase;
+            _removerPessoaUseCase = removerPessoaUseCase;
         }
 
         [HttpGet]
@@ -40,10 +47,24 @@ namespace AppCidades.Controllers
             }
             return Ok(pessoa);
         }
-
+        /* Estrutura anterior 
         [HttpPost]
-        public IActionResult Adicionar([FromBody] AdicionarPessoaRequest pessoa)
+        public IActionResult Adicionar([FromBody] Pessoa pessoa)
         {
+            // AdicionarPessoaRequest  
+            if (pessoa == null)
+            {
+                return BadRequest();
+            }
+            return Ok(_pessoa.AdicionarPessoa(pessoa));
+          
+        }
+        */
+        /* Hexagonal */
+        [HttpPost]
+        public IActionResult Adicionar([FromBody] AdicionarPessoaRequest  pessoa)
+        {
+             
             if (pessoa == null)
             {
                 return BadRequest();
@@ -61,12 +82,21 @@ namespace AppCidades.Controllers
             }
             return Ok(_pessoa.AtualizarPessoa(pessoa));
         }
-
+        /*
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
 
             return Ok(_pessoa.DeletarPessoa(id));
+        }
+        */
+        /* Estrutura Hexagonal */
+        [HttpDelete("{id}")]
+        public IActionResult Delete(long id)
+        {
+            var request = new RemoverPessoaRequest();
+            request.id = id; 
+           return Ok(_removerPessoaUseCase.Executar(request ));
         }
     }
 }

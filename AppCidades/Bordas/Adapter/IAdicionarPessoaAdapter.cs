@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AppCidades.Bordas.Adapter
 {
-    interface IAdicionarPessoaAdapter
+    public interface IAdicionarPessoaAdapter
     {
         public Pessoa converterRequestParaPessoa(AdicionarPessoaRequest request);
     }
