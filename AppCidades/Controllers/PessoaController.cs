@@ -1,11 +1,9 @@
-﻿using AppCidades.Entities;
+﻿using AppCidades.DTO.Pessoa.AdicionarPessoa;
+using AppCidades.Entities;
 using AppCidades.Services;
+using AppCidades.UseCase.Pessoa;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace AppCidades.Controllers
 {
@@ -15,6 +13,7 @@ namespace AppCidades.Controllers
     {
         private readonly ILogger<PessoaController> _logger;
         private readonly IPessoaService _pessoa;
+        private readonly IAdicionarPessoaUseCase _adicionarPessoaUseCase;
 
         public PessoaController(ILogger<PessoaController> logger, IPessoaService pessoa)
         {
@@ -43,13 +42,14 @@ namespace AppCidades.Controllers
         }
 
         [HttpPost]
-        public IActionResult Adiciona([FromBody] Pessoa pessoa)
+        public IActionResult Adicionar([FromBody] AdicionarPessoaRequest pessoa)
         {
             if (pessoa == null)
             {
                 return BadRequest();
             }
-            return Ok(_pessoa.AdicionarPessoa(pessoa));
+            //return Ok(_pessoa.AdicionarPessoa(pessoa));
+            return Ok(_adicionarPessoaUseCase.Executar(pessoa));
         }
 
         [HttpPut]

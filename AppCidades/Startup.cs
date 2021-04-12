@@ -1,6 +1,11 @@
+using AppCidades.Adapter;
+using AppCidades.Bordas.Adapter;
+using AppCidades.Bordas.Repositorios;
 using AppCidades.Context;
 using AppCidades.Entities;
+using AppCidades.Repositorio;
 using AppCidades.Services;
+using AppCidades.UseCase.Pessoa;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -33,6 +38,14 @@ namespace AppCidades
 
 
             services.AddScoped<IPessoaService, PessoaService>();
+            services.AddScoped<IAdicionarPessoaUseCase, AdicionarPessoaUseCase>();
+            services.AddScoped<IAtualizarPessoaUseCase, AtualizarPessoaUseCase>();
+            services.AddScoped<IRemoverPessoaUseCase, RemoverPessoaUseCase>();
+            services.AddScoped<IRetornarListaPessoaUseCase, RetornarListaPessoaUseCase>();
+            services.AddScoped<IRetornarPessoaPorIdUseCase, RetornarPessoaPorIdUseCase>();
+            services.AddScoped<IRepositorioPessoas, RepositorioPessoas>();
+            services.AddScoped<IAdicionarPessoaAdapter, AdicionarPessoaAdapter>();
+
             services.AddControllers();
         }
 
