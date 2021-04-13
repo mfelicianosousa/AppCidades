@@ -26,14 +26,21 @@ namespace AppCidades.UseCase.Pessoa
             var response = new AdicionarPessoaResponse();
             try
             {
+                if (request.nome.Length < 20)
+                {
+                    response.msg = "Erro ao adicionar uma Pessoa";
+                    return response;
+                }
               
                 var pessoaAdicionar = _adapter.converterRequestParaPessoa(request);
                 _repositorioPessoas.Add(pessoaAdicionar);
-                response.msg = "Adicionado com sucesso!";
+                response.msg = "Adicionado com sucesso";
+                response.id = pessoaAdicionar.id;
                 return response;
+
             } catch
             {
-                response.msg = "Erro ao adicionar uma Pessoa!";
+                response.msg = "Erro ao adicionar Pessoa";
                 return response;
             }
             

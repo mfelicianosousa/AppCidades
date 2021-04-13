@@ -14,10 +14,11 @@ namespace AppCidades.Repositorio
             _local = local;
         }
 
-        public void Add(Pessoa request)
+        public long Add(Pessoa request)
         {
             _local.pessoa.Add(request);
             _local.SaveChanges();
+            return request.id;
         }
 
         public void Remove(long id)
