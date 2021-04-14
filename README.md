@@ -64,7 +64,7 @@ Requisições para a API devem seguir os padrões:
 
 #### Dados para envio no POST
 
-### Listar (List) [GET]
+### Listar todos (AllList) [GET]
 
 http://localhost:5000/api/pessoa/
 
@@ -72,20 +72,23 @@ http://localhost:5000/api/pessoa/
 
     
 + Response 200 (application/json)
-[
-    {
-        "id": 1,
-        "nome": "Marcelino",
-        "sexo": "M",
-        "cpf": "06656087674",
-        "email": "marcelino.feliciano@gmail.com"
-    }
-]
+    [
+        {
+            "id": 1,
+            "nome": "Marcelino",
+            "sexo": "M",
+            "cpf": "06656087674",
+            "email": "marcelino.feliciano@gmail.com"
+        }
+    ]
 
-### Novo (Create) [POST]
+### Novo ( Add ) [POST]
 
 + host 
     http://localhost:5000/api/pessoa
+    
+    Deve se preencher o Body (Corpo da requisição) sem o identificador. 
+    O identificador é gerado automáticamente.
 
 + Attributes (object)
   + nome: nome da pessoa (String, required) - limite 60 caracteres
@@ -122,21 +125,47 @@ http://localhost:5000/api/pessoa/
               "cpf": "06656087674",
               "email": "marcelino.feliciano@gmail.com"
            }
+           
+ ### Buscar por Id FindById() [GET  /api/pessoa/{id}]
+ 
+ + Host 
 
-### Editar (Update) [PUT  /api/pessoa/]
+    + http://localhost:5000/api/pessoa/4
+
+Obs: No Body deve se passar a {} vazio
+Se não passar vai dar erro na hora de retornar o registro json 
+
++ Body
+
+     {}
+     
++ Request (application/json)
+
+    + Headers
+           None
+
++ Response 200 (application/json)
+
+    + Headers
+
+            X-RateLimit-Limit: 60
+            X-RateLimit-Remaining: 59
+
+    + Body       
+
+### Editar (Update) [PUT /api/pessoa/{1}]
 
 + Host 
 
   http://localhost:5000/api/pessoa
 
-Obs: Para alterações o id é passado no corpo da requisição
+Obs: Para efetuar as alterações o id deve também ser passado no corpo da requisição
 
 + Request (application/json)
 
     + Headers
 
-            Authorization: Bearer [access_token]
-
+            none
     + Body
         {
             "id": 1,             
