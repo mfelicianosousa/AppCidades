@@ -1,4 +1,4 @@
-﻿using AppCidades.DTO.Pessoa.RetornarPessoaPorId;
+﻿using AppCidades.DTO.Pessoas.RetornarListaPessoa;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AppCidades.UseCase.Pessoa
 {
-    public class RetornarPessoaPorIdUseCase : IRetornarPessoaPorIdUseCase
+    public class RetornarListaPessoaUseCase : IRetornarListaPessoaUseCase
     {
-        public RetornarPessoaPorIdResponse Executar(RetornarPessoaPorIdRequest request)
+        public RetornarListaPessoaResponse Executar(RetornarListaPessoaRequest request)
         {
             throw new NotImplementedException();
         }

@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AppCidades.DTO.Pessoa.AdicionarPessoa
+namespace AppCidades.DTO.Pessoas.RemoverPessoa
 {
-    public class AdicionarPessoaResponse
+    public class RemoverPessoaRequest
     {
         public long id { get; set; }
-        public string msg { get; set; }
     }
 }

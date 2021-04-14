@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AppCidades.DTO.Pessoa.AdicionarPessoa
+namespace AppCidades.DTO.Pessoas.AdicionarPessoa
 {
     public class AdicionarPessoaRequest
     {

@@ -1,5 +1,5 @@
 ﻿
-using AppCidades.DTO.Pessoa.RemoverPessoa;
+using AppCidades.DTO.Pessoas.RemoverPessoa;
 using System;
 using System.Collections.Generic;
 using System.Linq;

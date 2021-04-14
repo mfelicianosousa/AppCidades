@@ -1,6 +1,6 @@
 ﻿using AppCidades.Bordas.Adapter;
 using AppCidades.Bordas.Repositorios;
-using AppCidades.DTO.Pessoa.AdicionarPessoa;
+using AppCidades.DTO.Pessoas.AdicionarPessoa;
 using AppCidades.Entities;
 using AppCidades.UseCase.Pessoa;
 using FluentAssertions;

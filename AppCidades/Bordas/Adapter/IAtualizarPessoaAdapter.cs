@@ -1,4 +1,4 @@
-﻿using AppCidades.DTO.Pessoas.AdicionarPessoa;
+﻿using AppCidades.DTO.Pessoas.AtualizarPessoa;
 using AppCidades.Entities;
 using System;
 using System.Collections.Generic;
@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace AppCidades.Bordas.Adapter
 {
-    public interface IAdicionarPessoaAdapter
+    public interface IAtualizarPessoaAdapter
     {
-        public Pessoa converterRequestParaPessoa(AdicionarPessoaRequest request);
+        public Pessoa converterRequestParaPessoa(AtualizarPessoaRequest request);
     }
 }

@@ -1,4 +1,4 @@
-﻿using AppCidades.DTO.Pessoa.AdicionarPessoa;
+﻿using AppCidades.DTO.Pessoas.AdicionarPessoa;
 using Bogus;
 using System;
 using System.Collections.Generic;

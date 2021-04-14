@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AppCidades.DTO.Pessoa.RetornarPessoaPorId
+namespace AppCidades.DTO.Pessoas.RetornarListaPessoa
 {
-    public class RetornarPessoaPorIdResponse
+    public class RetornarListaPessoaRequest
     {
+
+
     }
 }

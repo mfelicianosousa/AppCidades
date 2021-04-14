@@ -45,6 +45,7 @@ namespace AppCidades
            // services.AddScoped<IRetornarPessoaPorIdUseCase, RetornarPessoaPorIdUseCase>();
             services.AddScoped<IRepositorioPessoas, RepositorioPessoas>();
             services.AddScoped<IAdicionarPessoaAdapter, AdicionarPessoaAdapter>();
+            services.AddScoped<IAtualizarPessoaAdapter, AtualizarPessoaAdapter>();
 
             services.AddControllers();
         }

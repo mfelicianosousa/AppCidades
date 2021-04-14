@@ -1,4 +1,4 @@
-﻿using AppCidades.DTO.Pessoa.RetornarListaPessoa;
+﻿using AppCidades.DTO.Pessoas.RetornarListaPessoa;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,5 +1,5 @@
 ﻿using AppCidades.Bordas.Repositorios;
-using AppCidades.DTO.Pessoa.RemoverPessoa;
+using AppCidades.DTO.Pessoas.RemoverPessoa;
 using AppCidades.Repositorio;
 using System;
 

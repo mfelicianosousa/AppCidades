@@ -1,11 +1,7 @@
 ﻿
 using AppCidades.Bordas.Adapter;
 using AppCidades.Bordas.Repositorios;
-using AppCidades.DTO.Pessoa.AdicionarPessoa;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using AppCidades.DTO.Pessoas.AdicionarPessoa;
 
 namespace AppCidades.UseCase.Pessoa
 {
